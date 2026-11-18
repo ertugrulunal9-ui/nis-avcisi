@@ -1,0 +1,29 @@
+{
+  "not": "Statik araştırma notu (2026-11-18). Ayrıntı ve kaynaklar: docs/arastirma-2026-11-18.md",
+  "platformlar": [
+    {
+      "ad": "YouTube uzun video",
+      "turkiyedenGelir": "Açık (YPP: 1.000 abone + 12 ayda 4.000 saat)",
+      "ucretsizVeri": "Var (YouTube Data API; bu araç ölçüyor)",
+      "not": "Türkiye'den doğrulanmış tek doğrudan reklam geliri yolu."
+    },
+    {
+      "ad": "YouTube Shorts",
+      "turkiyedenGelir": "Açık (YPP içinde havuz modeli; 90 günde 10M Shorts izlenmesi)",
+      "ucretsizVeri": "Var (bu araç ölçüyor)",
+      "not": "İzlenme başı gelir uzun videonun çok altında; büyüme kanalı olarak değerli."
+    },
+    {
+      "ad": "TikTok",
+      "turkiyedenGelir": "Türkiye için Creator Rewards kanıtı yok; TikTok Shop yok görünüyor",
+      "ucretsizVeri": "Yok (Creative Center programatik değil, Research API yalnız akademik)",
+      "not": "Gelir yalnız marka iş birliğinden; bu araç ölçemiyor."
+    },
+    {
+      "ad": "Instagram Reels",
+      "turkiyedenGelir": "Reels bonusu kapalı; yalnız marka iş birliği",
+      "ucretsizVeri": "Yok",
+      "not": "Gelir yalnız marka iş birliğinden; bu araç ölçemiyor."
+    }
+  ]
+}

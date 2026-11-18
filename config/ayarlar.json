@@ -1,0 +1,56 @@
+{
+  "turetilmisMetrikEkiKabulEdildi": false,
+  "kota": {
+    "aramaGunluk": 100,
+    "aramaPayi": 95,
+    "birimGunluk": 10000,
+    "birimPayi": 9000
+  },
+  "arama": {
+    "gun": 180,
+    "bolge": { "tr": "TR", "en": "US" }
+  },
+  "uzunMinSaniye": 240,
+  "kisaMaxSaniye": 180,
+  "kanalBasinaMaxVideo": 3,
+  "esik": {
+    "tr": {
+      "kucukKanalAbone": 10000,
+      "yeniKanalGun": 365,
+      "buyukKanalAbone": 500000,
+      "oran": 3,
+      "aboneTabani": 1000,
+      "minIzlenme": 10000,
+      "referansGunlukIzlenme": 2000
+    },
+    "en": {
+      "kucukKanalAbone": 25000,
+      "yeniKanalGun": 365,
+      "buyukKanalAbone": 1000000,
+      "oran": 3,
+      "aboneTabani": 1000,
+      "minIzlenme": 30000,
+      "referansGunlukIzlenme": 10000
+    }
+  },
+  "kisaCarpani": {
+    "minIzlenme": 5,
+    "referansGunlukIzlenme": 5
+  },
+  "agirlik": {
+    "firsat": 0.4,
+    "talep": 0.3,
+    "acik": 0.15,
+    "para": 0.15
+  },
+  "firsatMinKanal": 2,
+  "minOrnek": 10,
+  "saklamaGun": 30,
+  "kesif": {
+    "beklemeMs": 400,
+    "ekler": {
+      "tr": ["", " nasıl", " neden", " gerçek", " tarihi", " belgesel", " hikayesi"],
+      "en": ["", " how", " why", " explained", " history", " documentary", " story"]
+    }
+  }
+}

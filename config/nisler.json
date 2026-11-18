@@ -1,0 +1,25 @@
+{
+  "not": "Tohum nişler: ölçülecek giriş, öneri değil. Sıralamayı veri belirler. tr/en: 1-3 arama ifadesi (her ifade 1 arama kotası). kategori config/rpm.json anahtarlarından biri. Kazanan nişi 'kesfet' ile daraltıp alt nişleri buraya ekle.",
+  "nisler": [
+    { "id": "tarih-belgesel", "etiket": "Tarih belgeseli", "kategori": "tarih", "tr": ["tarih belgeseli", "tarihte bugün ne oldu"], "en": ["history documentary", "history explained"] },
+    { "id": "osmanli", "etiket": "Osmanlı tarihi", "kategori": "tarih", "tr": ["osmanlı tarihi", "osmanlı padişahları"], "en": ["ottoman empire history", "ottoman sultans"] },
+    { "id": "antik-uygarlik", "etiket": "Antik uygarlıklar", "kategori": "tarih", "tr": ["antik uygarlıklar", "antik roma"], "en": ["ancient civilizations", "ancient rome documentary"] },
+    { "id": "savas-tarihi", "etiket": "Savaş tarihi", "kategori": "tarih", "tr": ["savaş tarihi", "ikinci dünya savaşı belgesel"], "en": ["military history", "ww2 documentary"] },
+    { "id": "mitoloji", "etiket": "Mitoloji hikâyeleri", "kategori": "tarih", "tr": ["mitoloji hikayeleri", "yunan mitolojisi"], "en": ["mythology stories", "greek mythology explained"] },
+    { "id": "uzay", "etiket": "Uzay belgeseli", "kategori": "bilim", "tr": ["uzay belgeseli", "evrenin sırları"], "en": ["space documentary", "space explained"] },
+    { "id": "bilim-aciklama", "etiket": "Bilim anlatımı", "kategori": "bilim", "tr": ["bilim anlatımı", "bilimsel gerçekler"], "en": ["science explained", "science facts"] },
+    { "id": "hayvan-belgesel", "etiket": "Hayvan belgeseli", "kategori": "bilim", "tr": ["hayvan belgeseli", "vahşi doğa belgeseli"], "en": ["animal documentary", "wildlife documentary"] },
+    { "id": "cografya", "etiket": "Ülkeler ve coğrafya", "kategori": "egitim", "tr": ["ülkeler hakkında bilgiler", "coğrafya anlatımı"], "en": ["geography explained", "countries explained"] },
+    { "id": "psikoloji", "etiket": "Psikoloji", "kategori": "egitim", "tr": ["psikoloji bilgileri", "insan psikolojisi"], "en": ["psychology facts", "human psychology explained"] },
+    { "id": "felsefe", "etiket": "Felsefe", "kategori": "egitim", "tr": ["felsefe anlatımı", "filozoflar"], "en": ["philosophy explained", "philosophers"] },
+    { "id": "gizem", "etiket": "Çözülemeyen gizemler", "kategori": "gizem", "tr": ["çözülemeyen gizemler", "gizemli olaylar"], "en": ["unsolved mysteries", "mysterious events"] },
+    { "id": "gercek-suc", "etiket": "Gerçek suç", "kategori": "gizem", "tr": ["gerçek suç hikayeleri", "seri katiller belgesel"], "en": ["true crime documentary", "true crime stories"] },
+    { "id": "kisisel-finans", "etiket": "Kişisel finans", "kategori": "finans", "tr": ["kişisel finans", "para biriktirme"], "en": ["personal finance", "how to save money"] },
+    { "id": "ekonomi-aciklama", "etiket": "Ekonomi anlatımı", "kategori": "finans", "tr": ["ekonomi nasıl çalışır", "enflasyon nedir"], "en": ["economics explained", "how the economy works"] },
+    { "id": "sirket-hikayesi", "etiket": "Şirket hikâyeleri", "kategori": "is", "tr": ["şirketlerin hikayesi", "markaların hikayesi"], "en": ["company history documentary", "business documentary"] },
+    { "id": "teknoloji-aciklama", "etiket": "Teknoloji nasıl çalışır", "kategori": "teknoloji", "tr": ["teknoloji nasıl çalışır", "nasıl çalışır"], "en": ["how technology works", "how it works"] },
+    { "id": "yapay-zeka-araclari", "etiket": "Yapay zekâ araçları", "kategori": "teknoloji", "tr": ["yapay zeka araçları", "yapay zeka ile para kazanma"], "en": ["ai tools", "best ai tools"] },
+    { "id": "oyun-tarihi", "etiket": "Video oyun tarihi", "kategori": "oyun", "tr": ["oyun tarihi", "oyunların hikayesi"], "en": ["video game history", "gaming documentary"] },
+    { "id": "uyku-hikaye", "etiket": "Uyku hikâyeleri", "kategori": "eglence", "tr": ["uyku hikayeleri", "uyumadan önce dinle"], "en": ["sleep stories", "stories to fall asleep to"] }
+  ]
+}

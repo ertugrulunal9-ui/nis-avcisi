@@ -1,0 +1,32 @@
+{
+  "not": "Üçüncü taraf tahmini ve çıkarım; YouTube verisi değildir. İngilizce bantlar ajans derlemesinden (CPM × 0,55), Türkçe bantlar İngilizcenin ~%5–15'i varsayımıyla (ölçülmedi). Kaynak: docs/arastirma-2026-11-18.md. Güven: düşük. Kendi kanalında YouTube Studio'daki gerçek RPM'i görünce güncelle.",
+  "birim": "USD / 1000 izlenme, içerik üreticisine kalan (RPM)",
+  "uzun": {
+    "en": {
+      "finans": [8, 14],
+      "is": [5, 10],
+      "teknoloji": [4, 9],
+      "egitim": [3, 6],
+      "bilim": [3, 6],
+      "tarih": [3, 6],
+      "gizem": [2, 5],
+      "oyun": [1.5, 3.5],
+      "eglence": [1.5, 4]
+    },
+    "tr": {
+      "finans": [0.6, 1.6],
+      "is": [0.4, 1.2],
+      "teknoloji": [0.4, 1.0],
+      "egitim": [0.25, 0.8],
+      "bilim": [0.25, 0.8],
+      "tarih": [0.25, 0.8],
+      "gizem": [0.2, 0.6],
+      "oyun": [0.15, 0.4],
+      "eglence": [0.15, 0.5]
+    }
+  },
+  "kisa": {
+    "en": { "*": [0.03, 0.08] },
+    "tr": { "*": [0.01, 0.03] }
+  }
+}
