@@ -192,6 +192,25 @@ test('türetilmiş mod: bölüm başlıkları ve etiket cümleleri', () => {
   assert.ok(!markdown.includes('Neden puan yok'));
 });
 
+test('türetilmiş mod: iki dilli etiket en üstte; iki modda da YouTube kaynak satırı', () => {
+  const d = buildReport(derivedRun(), s).markdown;
+  const ilkTablo = d.indexOf('## Karşılaştırma (mutlak sayılar)');
+  for (const metin of [
+    'bu aracın hesabıdır, YouTube verisi değildir',
+    'are calculated independently by this tool and are not YouTube data',
+    'Revenue figures are third-party RPM estimates, not YouTube data.',
+  ]) {
+    const i = d.indexOf(metin);
+    assert.ok(i >= 0 && i < ilkTablo, `"${metin}" karşılaştırmadan önce olmalı`);
+  }
+  assert.ok(d.includes('Veri kaynağı / Data source: YouTube (YouTube Data API v3)'));
+
+  const h = buildReport(rawRun(), s).markdown;
+  const ust = h.slice(0, h.indexOf(YONTEM));
+  assert.ok(ust.includes('Veri kaynağı / Data source: YouTube (YouTube Data API v3)'));
+  assert.ok(!ust.includes('Derived metrics'));
+});
+
 test('türetilmiş mod: başlıkta kota, hatalı hücre sayısı', () => {
   const { markdown } = buildReport(derivedRun(), s);
   assert.ok(markdown.includes('2026-11-18-1500'));

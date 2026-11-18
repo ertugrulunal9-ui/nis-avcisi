@@ -130,6 +130,18 @@ function baslikBolumu(runData) {
   const L = [];
   L.push(`# Niş Avcısı raporu: ${runData.runId}`);
   L.push('');
+  if (runData.derivedMetrics) {
+    // Türetilmiş metrik eki "açık ve belirgin" etiket ister; inceleyici Türkçe bilmeyebilir.
+    L.push(
+      '> **Türetilmiş metrikler** (oran, medyan, günlük izlenme, puan, gelir tahmini) bu aracın hesabıdır, YouTube verisi değildir. Gelir tahmini üçüncü taraf RPM tahminidir.',
+    );
+    L.push('>');
+    L.push(
+      '> **Derived metrics** (ratio, median, views per day, score, revenue estimate) are calculated independently by this tool and are not YouTube data. Revenue figures are third-party RPM estimates, not YouTube data.',
+    );
+    L.push('');
+  }
+  L.push('- Veri kaynağı / Data source: YouTube (YouTube Data API v3)');
   L.push(`- Tarih: ${fmtTarih(runData.createdAt)}`);
   L.push(`- Mod: ${runData.derivedMetrics ? 'türetilmiş' : 'ham'}`);
   L.push(`- Kota (Pasifik günü ${q?.day ?? DASH}): ${kota(q)}`);
@@ -306,8 +318,10 @@ function hamBolumu(runData) {
 function yontemBolumu(runData, s) {
   const L = ['## Yöntem ve etiketler', ''];
   L.push('Oran, medyan, günlük izlenme, puan ve gelir tahmini bu aracın hesabıdır, YouTube verisi değildir.');
+  L.push('(Ratio, median, views per day, score and revenue estimate are calculated by this tool, not YouTube data.)');
   L.push('');
   L.push('Gelir tahmini üçüncü taraf RPM tahminidir (config/rpm.json), YouTube verisi değildir.');
+  L.push('(Revenue figures are third-party RPM estimates, not YouTube data.)');
   L.push('');
   L.push(`Kısa = ≤ ${s.kisaMaxSaniye} sn video; dikey Shorts olduğu doğrulanamaz.`);
   L.push('');

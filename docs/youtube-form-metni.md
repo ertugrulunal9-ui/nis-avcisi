@@ -9,9 +9,33 @@ Form bunlar olmadan gönderilemez:
 2. **Gizlilik politikası adresi (zorunlu) ve kullanım şartları (dosya zorunlu).** Taslakları en altta. GitHub'da `PRIVACY.md` ve `TERMS.md` olarak durabilirler.
 3. **Ekran görüntüleri (JPEG/PNG):** gizlilik politikası sayfası, ana sayfada gizlilik linkinin göründüğü bir görüntü (depo README'sinde link) ve kullanım şartları.
 4. **Google Cloud proje numarası:** Console → proje seçili → "Gösterge tablosu" → "Proje bilgileri" → **Proje numarası** (yalnız rakamlar; proje kimliği değil).
-5. İsteğe bağlı ama faydalı: türetilmiş metriklerin etiketlendiğini gösteren rapor görüntüsü (sahte veriyle `node test/ornek-rapor.mjs` çıktısı) ve kısa bir ekran kaydı.
+5. "Analiz ve Raporlama" seçildiği için **zorunlu**: türetilmiş metriklerin etiketlendiğini gösteren rapor görüntüsü (sahte veriyle `node test/ornek-rapor.mjs` çıktısı). İsteğe bağlı ama önerilen: mimari ve akış şeması.
 
-Durum (2026-11-18): 1 ve 2 hazır. Depo `ertugrulunal9-ui/nis-avcisi` olacak; kökte `PRIVACY.md`, `TERMS.md` var ve README'nin başında İngilizce özet ile iki link duruyor (ana sayfa görüntüsündeki gizlilik linki). İletişim e-posta yerine deponun Issues sayfası. Ekran görüntüleri depo yayımlanınca alınır.
+Durum (2026-11-18): 1, 2 ve 3 hazır. Depo `ertugrulunal9-ui/nis-avcisi` herkese açık; kökte `PRIVACY.md`, `TERMS.md`, README'nin başında İngilizce özet, iki link ve "Developed with YouTube" rozeti. İletişim e-posta yerine deponun Issues sayfası.
+
+### Form Türkçe açılıyor: bölüm adları
+| Bu belgede | Formda |
+|---|---|
+| Section 1: Request Type | 1. Bölüm: İstek Türü |
+| Section 2: Organization and Contact Information | 2. Bölüm: Kuruluş ve İletişim Bilgileri |
+| Section 3: Business Model and Google Contacts | 3. Bölüm: İş Modeli ve Google ile İletişim |
+| Section 4: API Client Overview and Access Information | 4. Bölüm: API İstemcisine Genel Bakış ve Erişim Bilgileri |
+| Section 5: Use Cases and Quota Extension Details | 5. Bölüm: Kullanım Alanları ve Kota Artırma Ayrıntıları |
+| Section 6: Additional Evidence | 6. Bölüm: Ek Kanıtlar ve Belge Şartları |
+| Section 7: Acknowledgments | 7. Bölüm: Onaylar ve Gönderim |
+
+Seçenekler Türkçe görünür (ör. "Analytics & Reporting" = "Analiz ve Raporlama", "Internal Users" = "Dahili Kullanıcılar"). Metin kutularına İngilizce metni yapıştır.
+
+### Yüklenecek dosyalar (`out\form-ekleri\`)
+| Dosya | Formdaki alan |
+|---|---|
+| `1-anasayfa-gizlilik-linki.png` | 5. bölüm, Zorunlu kanıtlar: **Ana Sayfa Ekran Görüntüsü** (gizlilik linki + YouTube markası görünmeli) |
+| `2-gizlilik-politikasi.png` | 5. bölüm: **Gizlilik Politikası Ekran Görüntüleri** (YouTube bölümleri, Google Gizlilik Politikası linki, silme politikası) |
+| `3-kullanim-sartlari.png` | 5. bölüm: **Hizmet Şartları Belgesi** |
+| `4-rapor-ornegi-sentetik-veri.png` + `5-rapor-etiketler-ve-yontem.png` | 5. bölüm, Koşullu kanıtlar (d): **Kontrol Paneli/Özellik Ekran Görüntüleri** ("Analiz ve Raporlama" seçilince zorunlu) |
+| `6-mimari-ve-akis-semasi.png` | 6. bölüm: **Mimari Şeması** ve **Kullanıcı İşlemleri Akışı Şemaları** (isteğe bağlı ama önerilen) |
+
+Kanıt standardı (6. bölüm): en az 1280×720, okunur metin, açıklayıcı dosya adı, dosya başına 10 MB altı. Altı dosya da uyuyor (en küçüğü 1400×810). "Web uygulamaları için tarayıcı adres çubuğu" isteniyor; araç web uygulaması olmadığı için görüntüler adres çubuğusuz. İstersen 1–3'ü tarayıcıda açıp Win+Shift+S ile adres çubuğuyla kendin de alabilirsin.
 
 ---
 
@@ -39,6 +63,8 @@ I am an individual developer in Türkiye preparing to start my own YouTube chann
 
 The tool runs only on my own computer and I am its only user. It uses an API key (no OAuth, no user accounts) and reads only public data through the YouTube Data API v3: search.list for about 20 topic queries in Turkish and English, then videos.list and channels.list for the returned videos and their channels (public view counts, durations, publish dates, subscriber counts and channel creation dates).
 
+Separately, a small "discover" command reads public search suggestions for a seed topic from Google's autocomplete endpoint (no API key, no YouTube API quota, a few requests with pauses). These suggestions are used only as ideas for which topics to add to the scan.
+
 From this data the tool calculates a few derived metrics for each topic: views per day, the ratio of a video's views to its channel's subscriber count (to see whether small or new channels can succeed in that topic), the median views per day of the topic's videos, a composite topic score used only to rank topics against each other, and a monthly revenue range based on published third-party RPM estimates. The result is a local Markdown report that only I read. Every derived metric is labeled in the report as "calculated by this tool, not YouTube data", and revenue figures are labeled as "third-party RPM estimate, not YouTube data". Raw API fields are shown separately from derived metrics.
 
 The tool has no database. All API data and reports are deleted automatically after 30 days. Nothing is published, shared, sold or shown to anyone else, and the tool is not monetized.
@@ -62,7 +88,7 @@ The tool has no database. All API data and reports are deleted automatically aft
 - **Demo Account Username / Password, Login URL:** boş (giriş yok)
 - **Special Instructions for Access:**
 ```
-Nis Avcisi is a local command-line tool (Node.js) that runs only on the developer's own computer. There is no hosted interface and no login. The source code is available at the Primary Access URL. A sample report (generated with synthetic data) showing how derived metrics and estimates are labeled is attached as a screenshot.
+Nis Avcisi is a local command-line tool (Node.js) that runs only on the developer's own computer. There is no hosted interface and no login. The source code is available at the Primary Access URL. A sample report (generated with synthetic data) showing how derived metrics and estimates are labeled, and an architecture and user-flow diagram, are attached as evidence.
 ```
 - **Acknowledgment checkbox:** işaretle
 
@@ -71,9 +97,9 @@ Nis Avcisi is a local command-line tool (Node.js) that runs only on the develope
 - **Google Cloud Project Number:** [proje numaran]
 - **Use Case Category:** Analytics & Reporting (YouTube'un ek sayfası tam olarak bunu söylüyor)
 - **Does this API Client require users to sign in with their Google Account (OAuth 2.0)?:** No
-- **Derived metrics and data storage agreement:** işaretle ("I have read and agree to abide by the additional policies for derived metrics and data storage.")
+- **Derived metrics and data storage agreement** (formda "Gerekli sözleşme ve onay"): işaretle. Türkçe metin, Bölüm III E.2.a ve E.4.h'nin "bu metriklerin YouTube API'sinden doğrudan alınmadığını ve sizin tarafınızdan bağımsız olarak oluşturulduğunu gösteren açık ve belirgin bir etiket" şartıyla gevşetildiğini söylüyor. Raporun en üstündeki iki dilli etiket bu şart için.
 - **Expected API Usage Volume:** Fewer than 1,000/day
-- **Evidence:** ön koşul 3'teki görüntüler; "dashboard/feature screenshots" için örnek rapor görüntüsü
+- **Evidence:** yukarıdaki "Yüklenecek dosyalar" tablosu (1, 2, 3 zorunlu; 4 ve 5 koşullu d)
 - **Quota endpoints:** youtube.search.list, youtube.videos.list, youtube.channels.list
 - **Quota request:** No change / Default quota (10k quota points)
 - **Total Per Day Quota:** 10000
@@ -92,6 +118,23 @@ Storage: no database. API data and reports are deleted automatically after 30 da
 ```
 Default allocation (100 calls/day) is enough. One scan uses about 80 calls: 20 topics x 2 languages (Turkish, English) x 2 search phrasings, at most once per day. The tool stops locally at 95 calls.
 ```
+
+## Section 6: Ek Kanıtlar ve Belge Şartları
+- **Mimari Şeması:** `6-mimari-ve-akis-semasi.png`
+- **Kullanıcı İşlemleri Akışı Şemaları:** aynı dosya (şema iki akışı da gösteriyor)
+- **Diğer Destekleyici Materyaller:** boş bırak. Buradaki "yükleme komut dosyası ya da uçtan uca ekran kaydı" şartı video yükleme ve şirket içi araçlar için. Bu araç video yüklemiyor.
+
+## Section 7: Onaylar ve Gönderim
+Hepsi zorunlu. İşaretlemeden önce ne kabul ettiğini bil:
+- **YouTube API Servisleri Hizmet Şartları:** okudum ve kabul ediyorum (https://developers.google.com/youtube/terms/api-services-terms-of-service).
+- **Google Gizlilik Politikası:** okudum ve anladım.
+- **Geliştirici Politikaları:** değişiklikleri takip etmek senin sorumluluğun. **Beyan ettiğin kullanım amacı değişirse YouTube'a yazılı bildirip onay almadan devam etmeyeceğini kabul ediyorsun.** Pratikte: aracı başkalarına açmak, satmak, müşteri için kullanmak ya da sonuçları yayımlamak, önce YouTube'a bildirmeyi gerektirir.
+- **Fesih:** uyumsuzlukta Google erişimi askıya alabilir ya da kapatabilir.
+- **Demo hesap feragatnamesi (varsa):** demo hesap vermiyoruz ama kutu zorunlu.
+- **Bilgilerin doğruluğu:** bilgiler doğru ve eksiksiz. 3. bölüm metnine "discover" komutunun da (Google arama önerileri, API dışı) yazılması bu yüzden.
+- **Veri kullanımı:** Google gönderini otomatik/LLM tabanlı sistemlerle de işleyebilir; destek görüşmeleri kaydedilebilir.
+
+Gönderdikten sonra: **onay e-postasındaki doğrulama linkine hemen tıkla** (form, gecikmeyi önlemek için bunu istiyor). Sayfadaki "Gönderdiğiniz bilgilerin kopyasını indirin" ile bir kopyasını sakla.
 
 ---
 

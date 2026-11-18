@@ -3,6 +3,8 @@
 > **English summary.** Nis Avcisi ("niche finder") is a personal, single-user command-line tool that helps its developer decide which topics to make YouTube videos about, in Turkish or English, as long or short videos. It reads public data through the YouTube Data API v3 with an API key (no OAuth): `search.list`, `videos.list`, `channels.list`, about 80 searches per day at most. It writes a local Markdown report. Derived metrics are labeled as calculated by this tool, not YouTube data, and revenue figures are labeled as third-party estimates. API data is deleted automatically after 30 days. Nothing is published or shared.
 >
 > **[Privacy Policy](PRIVACY.md)** · **[Terms of Use](TERMS.md)** · Uses [YouTube API Services](https://developers.google.com/youtube); by using it you agree to the [YouTube Terms of Service](https://www.youtube.com/t/terms).
+>
+> <a href="https://www.youtube.com"><img src="https://developers.google.com/static/youtube/images/developed-with-youtube-sentence-case-light.png" alt="Developed with YouTube" width="180"></a>
 
 Yapay zekâ ile YouTube içeriği üretmeden önce "hangi niş, hangi dil, uzun mu kısa mı" sorusunu veriyle yanıtlayan ücretsiz, yerel araç. Ücretli niş araçlarının (NexLev, 1of10, vidIQ) çekirdek sinyalini, yani küçük ya da yeni kanalların birden fazlasının büyük izlenme almasını, YouTube'un ücretsiz API'siyle ölçer.
 
