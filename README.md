@@ -4,7 +4,7 @@
 >
 > **[Privacy Policy](PRIVACY.md)** · **[Terms of Use](TERMS.md)** · Uses [YouTube API Services](https://developers.google.com/youtube); by using it you agree to the [YouTube Terms of Service](https://www.youtube.com/t/terms).
 >
-> <a href="https://www.youtube.com"><img src="https://developers.google.com/static/youtube/images/developed-with-youtube-sentence-case-light.png" alt="Developed with YouTube" width="180"></a>
+> <a href="https://www.youtube.com"><picture><source media="(prefers-color-scheme: dark)" srcset="https://developers.google.com/static/youtube/images/developed-with-youtube-sentence-case-light.png"><img src="https://developers.google.com/static/youtube/images/developed-with-youtube-sentence-case-dark.png" alt="Developed with YouTube" width="180"></picture></a>
 
 Yapay zekâ ile YouTube içeriği üretmeden önce "hangi niş, hangi dil, uzun mu kısa mı" sorusunu veriyle yanıtlayan ücretsiz, yerel araç. Ücretli niş araçlarının (NexLev, 1of10, vidIQ) çekirdek sinyalini, yani küçük ya da yeni kanalların birden fazlasının büyük izlenme almasını, YouTube'un ücretsiz API'siyle ölçer.
 
